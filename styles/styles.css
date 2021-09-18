@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+body {
+    background-color: #181818;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+nav .title { 
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+}
+
+nav select {
+    width: 20%;
+    color: #fff;
+    height: 35px;
+    background-color: #000;
+    border-radius: 15px;
+    outline: none;
+    border-color:transparent;
+}
+
+.canvases {
+    position: relative;
+    display: none;
+    justify-content: center;
+    padding: 45px;
+    padding-bottom: 20px; 
+}
+
+
+
+canvas {
+    border:1px solid #000;
+    background: #000;
+    height: 80vh;
+}
+
+.range_sliders {
+    display: flex;
+    position: absolute;
+    top: 0;
+    justify-content: space-between;
+    width: 65%;
+}
+
+.range_sliders div {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    justify-content: space-between;
+
+}
+
+button {
+    outline: none;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    background-color: #010101;
+    color: #fff;
+}
+
+button:hover { 
+    transform: scale(1.1);
+    filter: grayscale(75%);
+    -webkit-filter: grayscale(75%);
+    -moz-filter: grayscale(75%);
+}
+
+
+@media (max-width: 768px) {
+    nav select {
+        width: 45%;
+    }
+}
+
