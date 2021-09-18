@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="https://docs.opencv.org/master/opencv.js" type="text/javascript"></script>
+    <title>Drawify</title>
+</head>
+<body>
+    
+    <nav class="navBar">
+        <div class="title">
+            Drawify
+        </div>
+
+        <select id="selector">
+            <option value="Sketchify" id="sketch">Sketchify</option>
+            <option value="oil_pasted" id="oil_pasted">Oil Pasted</option>
+        </select>
+    </nav>
+
+   <section class="canvases" id="canvases"> 
+    <section id="original">
+     <div class="wrapper">
+        <canvas id="original_image"></canvas>
+     </div>
+    </section>
+
+    <section id="result_section">
+        <div class="wrapper">
+            <canvas id="result_canvas"></canvas>
+        </div>
+    </section>
+
+    <section class="range_sliders">
+
+        <div id="darken">
+            <label for="darken_sketch">Darken</label>
+            <input type="range" id="darken-slider" name="darken-sketch" min="0" max="200" value="120" step="10">
+        </div>
+
+
+        <div id="intensity">
+            <label for="intensity">Intensity</label>
+            <input type="range" id="intensity-slider" name="intensity" min="0" max="25" value="10" step="1">
+        </div>
+
+
+    </section>
+
+    <section class="buttons">
+        <input type="file" id="file1" accept="image/*" style="display:none">
+        <button id="upload">Upload</button>
+        <button id="Apply">Apply</button>
+        <button id="Download">Download</button>
+    </section>
+
+</section>
+
+
+    <script defer type="text/javascript" src="scripts/app.js"></script>
+</body>
+</html>
